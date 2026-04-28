@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 110" width="380" height="110">
+  <rect width="380" height="110" rx="8" fill="#1e1e2e"/>
+  <text x="190" y="16" fill="#f9e2af" font-family="sans-serif" font-size="10" font-weight="600" text-anchor="middle">🚶 Stand &amp; Move — Break from Sitting</text>
+  <g transform="translate(160,56)">
+    <!-- Chair (left) -->
+    <rect x="-40" y="8" width="28" height="3" rx="1" fill="#313244"/>
+    <rect x="-40" y="11" width="3" height="14" fill="#313244"/>
+    <rect x="-15" y="11" width="3" height="14" fill="#313244"/>
+    <rect x="-13" y="-10" width="3" height="20" fill="#313244"/>
+  </g>
+  <!-- Arrow -->
+  <line x1="155" y1="56" x2="185" y2="56" stroke="#f0883e" stroke-width="2" stroke-linecap="round">
+    <animate attributeName="opacity" values="0.3;1;1;0.3;0.3" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="185,52 193,56 185,60" fill="#f0883e">
+    <animate attributeName="opacity" values="0.3;1;1;0.3;0.3" dur="2s" repeatCount="indefinite"/>
+  </polygon>
+  <!-- Walking person (right) -->
+  <g transform="translate(220,56)">
+    <circle cx="0" cy="-22" r="8" fill="#3fb950"/>
+    <line x1="0" y1="-14" x2="0" y2="6" stroke="#3fb950" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arms swinging -->
+    <line x1="0" y1="-8" x2="-10" y2="2" stroke="#3fb950" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="x2" values="-10;10;-10" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <!-- Legs walking -->
+    <line x1="0" y1="6" x2="-8" y2="22" stroke="#3fb950" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="x2" values="-8;8;-8" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="6" x2="8" y2="22" stroke="#3fb950" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="x2" values="8;-8;8" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  <text x="190" y="96" fill="#8b949e" font-family="sans-serif" font-size="9" text-anchor="middle">Stand up · walk around · 2-5 minutes</text>
+</svg>

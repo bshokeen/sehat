@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#161b22"/>
+  <!-- Person from behind — back of head view -->
+  <!-- Shoulders -->
+  <rect x="80" y="105" width="80" height="28" rx="8" fill="#30363d"/>
+  <!-- Neck (back view) -->
+  <rect x="103" y="72" width="34" height="38" rx="6" fill="#484f58"/>
+  <!-- Back of head -->
+  <circle cx="120" cy="50" r="28" fill="#484f58"/>
+  <!-- Hair line hint -->
+  <path d="M94 40 Q120 18 146 40" fill="none" stroke="#30363d" stroke-width="2.5"/>
+
+  <!-- Target zone: skull base — bright pulsing bar -->
+  <rect x="101" y="68" rx="4" ry="4" width="38" height="8" fill="#f0883e">
+    <animate attributeName="opacity" values="0.2;0.8;0.8;0.2;0.2" dur="2.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Left hand fingers pressing -->
+  <line x1="80" y1="112" x2="95" y2="78" stroke="#89b4fa" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="104" cy="71" r="3.5" fill="#89b4fa">
+    <animate attributeName="r" values="2.5;4.5;4.5;2.5;2.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="110" cy="70" r="3.5" fill="#89b4fa">
+    <animate attributeName="r" values="2.5;4.5;4.5;2.5;2.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="95" y1="78" x2="107" y2="72" stroke="#89b4fa" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Right hand fingers pressing -->
+  <line x1="160" y1="112" x2="145" y2="78" stroke="#89b4fa" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="136" cy="71" r="3.5" fill="#89b4fa">
+    <animate attributeName="r" values="2.5;4.5;4.5;2.5;2.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="130" cy="70" r="3.5" fill="#89b4fa">
+    <animate attributeName="r" values="2.5;4.5;4.5;2.5;2.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <line x1="145" y1="78" x2="133" y2="72" stroke="#89b4fa" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- "Press here" callout -->
+  <g>
+    <animate attributeName="opacity" values="0.4;1;1;0.4;0.4" dur="2.5s" repeatCount="indefinite"/>
+    <line x1="160" y1="72" x2="145" y2="72" stroke="#f0883e" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="145,68 138,72 145,76" fill="#f0883e"/>
+  </g>
+  <text x="165" y="68" fill="#f0883e" font-family="sans-serif" font-size="9" font-weight="600">press</text>
+  <text x="165" y="79" fill="#f0883e" font-family="sans-serif" font-size="9" font-weight="600">here</text>
+
+  <!-- Instructions -->
+  <text x="120" y="146" fill="#8b949e" font-family="sans-serif" font-size="9" text-anchor="middle">Fingers at skull base · press gently · hold 30-60s</text>
+  <!-- Hold label -->
+  <rect x="14" y="130" rx="10" ry="10" width="72" height="22" fill="#f0883e" opacity="0.15"/>
+  <text x="50" y="145" fill="#f0883e" font-family="sans-serif" font-size="10" font-weight="600" text-anchor="middle">hold 30-60s</text>
+</svg>

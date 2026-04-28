@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#161b22"/>
+
+  <!-- Glass outline (tapered) -->
+  <polygon points="88,30 152,30 144,120 96,120" fill="none" stroke="#e6edf3" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Water filling up and down -->
+  <clipPath id="glass">
+    <polygon points="89,31 151,31 143,119 97,119"/>
+  </clipPath>
+  <rect x="88" y="30" width="64" height="90" fill="#1f6feb" opacity="0.35" clip-path="url(#glass)">
+    <animate attributeName="y" values="120;45;45;120" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="height" values="0;75;75;0" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Water surface ripple -->
+  <ellipse cx="120" cy="50" rx="24" ry="3" fill="#58a6ff" opacity="0" clip-path="url(#glass)">
+    <animate attributeName="opacity" values="0;0;0.6;0.6;0" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="120;50;50;120" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="rx" values="24;28;24;28" dur="1.2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Bubble 1 -->
+  <circle cx="110" cy="100" r="3" fill="#58a6ff" opacity="0" clip-path="url(#glass)">
+    <animate attributeName="cy" values="110;55;55;110" dur="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.5;0;0" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Bubble 2 -->
+  <circle cx="128" cy="95" r="2" fill="#58a6ff" opacity="0" clip-path="url(#glass)">
+    <animate attributeName="cy" values="105;60;60;105" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.4;0;0" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Bubble 3 -->
+  <circle cx="118" cy="90" r="2.5" fill="#58a6ff" opacity="0" clip-path="url(#glass)">
+    <animate attributeName="cy" values="100;52;52;100" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.45;0;0" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Droplet falling into glass -->
+  <circle cx="120" cy="10" r="4" fill="#1f6feb">
+    <animate attributeName="cy" values="10;10;32;32;10" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.8;0;0;0.8" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;4;6;6;4" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- 💧 icon pulsing left side -->
+  <text x="36" y="70" font-size="28" text-anchor="middle" opacity="0.6">
+    💧
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="font-size" values="28;34;28" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Label -->
+  <rect x="70" y="128" rx="10" ry="10" width="100" height="24" fill="#1f6feb" opacity="0.15"/>
+  <text x="120" y="144" fill="#58a6ff" font-family="sans-serif" font-size="12" font-weight="600" text-anchor="middle">Stay hydrated</text>
+
+  <!-- Checkmark hint right side -->
+  <text x="200" y="70" font-size="22" text-anchor="middle" opacity="0.5">
+    🥤
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </text>
+</svg>

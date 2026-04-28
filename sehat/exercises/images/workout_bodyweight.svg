@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#161b22"/>
+  <!-- Floor line -->
+  <line x1="20" y1="130" x2="220" y2="130" stroke="#30363d" stroke-width="2"/>
+  <!-- Person doing squats — phase 1 -->
+  <g>
+    <!-- Head -->
+    <circle cx="80" cy="42" r="11" fill="#484f58">
+      <animate attributeName="cy" values="42;58;42" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="78" cy="40" r="1.5" fill="#e6edf3">
+      <animate attributeName="cy" values="40;56;40" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="83" cy="40" r="1.5" fill="#e6edf3">
+      <animate attributeName="cy" values="40;56;40" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Torso -->
+    <rect x="73" y="53" width="16" height="28" rx="3" fill="#30363d">
+      <animate attributeName="y" values="53;69;53" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="height" values="28;20;28" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Arms forward for balance -->
+    <line x1="73" y1="62" x2="50" y2="58" stroke="#484f58" stroke-width="4" stroke-linecap="round">
+      <animate attributeName="y1" values="62;76;62" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="58;72;58" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="89" y1="62" x2="112" y2="58" stroke="#484f58" stroke-width="4" stroke-linecap="round">
+      <animate attributeName="y1" values="62;76;62" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="58;72;58" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- Left leg -->
+    <line x1="76" y1="81" x2="66" y2="128" stroke="#484f58" stroke-width="5" stroke-linecap="round">
+      <animate attributeName="y1" values="81;89;81" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="66;60;66" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- Right leg -->
+    <line x1="86" y1="81" x2="96" y2="128" stroke="#484f58" stroke-width="5" stroke-linecap="round">
+      <animate attributeName="y1" values="81;89;81" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="96;102;96" dur="2s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  <!-- Push-up person — static side view -->
+  <g transform="translate(140, 20)">
+    <!-- Body horizontal plank -->
+    <rect x="0" y="72" width="60" height="10" rx="4" fill="#30363d">
+      <animate attributeName="y" values="72;80;72" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Head -->
+    <circle cx="-4" cy="72" r="9" fill="#484f58">
+      <animate attributeName="cy" values="72;80;72" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Arms -->
+    <line x1="10" y1="82" x2="10" y2="128" stroke="#484f58" stroke-width="4" stroke-linecap="round">
+      <animate attributeName="y1" values="82;90;82" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="40" y1="82" x2="40" y2="128" stroke="#484f58" stroke-width="4" stroke-linecap="round">
+      <animate attributeName="y1" values="82;90;82" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Feet -->
+    <circle cx="62" cy="128" r="4" fill="#484f58"/>
+  </g>
+  <!-- Labels -->
+  <text x="80" y="148" fill="#a6e3a1" font-family="sans-serif" font-size="9" text-anchor="middle">squats</text>
+  <text x="170" y="148" fill="#a6e3a1" font-family="sans-serif" font-size="9" text-anchor="middle">push-ups</text>
+  <!-- Badge -->
+  <rect x="85" y="4" rx="10" ry="10" width="70" height="22" fill="#f47067" opacity="0.15"/>
+  <text x="120" y="19" fill="#f47067" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle">15 min</text>
+  <!-- Pulse indicator -->
+  <circle cx="18" cy="15" r="6" fill="#f47067" opacity="0.8">
+    <animate attributeName="r" values="6;8;6" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="30" y="18" fill="#f47067" font-family="sans-serif" font-size="8">WORKOUT</text>
+</svg>

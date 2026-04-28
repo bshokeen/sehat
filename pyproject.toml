@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "sehat-health-monitor"
+version = "1.0.0"
+description = "Sehat — a desktop health reminder app that lives in your system tray. Configurable timers for eye breaks, posture checks, stretching, hydration, and more."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "pystray>=0.19",
+    "Pillow>=10.0",
+    "plyer>=2.1",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+sehat = "sehat.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["sehat*"]
+
+[tool.setuptools.package-data]
+sehat = ["default_config.json", "exercises/*.json", "exercises/*.md", "exercises/images/*.svg"]

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 110" width="380" height="110">
+  <rect width="380" height="110" rx="8" fill="#1e1e2e"/>
+  <text x="190" y="16" fill="#f9e2af" font-family="sans-serif" font-size="10" font-weight="600" text-anchor="middle">🧘 Neck Side Stretch — Left &amp; Right</text>
+  <g transform="translate(190,60)">
+    <!-- Shoulders -->
+    <rect x="-30" y="16" width="60" height="14" rx="5" fill="#313244"/>
+    <!-- Neck -->
+    <rect x="-8" y="-2" width="16" height="22" rx="3" fill="#45475a"/>
+    <!-- Head tilts side to side -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 0 -8;-25 0 -8;-25 0 -8;0 0 -8;25 0 -8;25 0 -8;0 0 -8" dur="5s" repeatCount="indefinite"/>
+      <circle cx="0" cy="-18" r="16" fill="#45475a"/>
+      <circle cx="-4" cy="-22" r="2" fill="#e6edf3"/>
+      <circle cx="4" cy="-22" r="2" fill="#e6edf3"/>
+    </g>
+    <!-- Direction arrows -->
+    <g>
+      <animate attributeName="opacity" values="1;1;0.3;0.3;0.3;0.3;1" dur="5s" repeatCount="indefinite"/>
+      <polygon points="-40,-10 -48,-18 -40,-26" fill="#bc8cff"/>
+    </g>
+    <g>
+      <animate attributeName="opacity" values="0.3;0.3;0.3;0.3;1;1;0.3" dur="5s" repeatCount="indefinite"/>
+      <polygon points="40,-10 48,-18 40,-26" fill="#bc8cff"/>
+    </g>
+  </g>
+  <text x="190" y="96" fill="#8b949e" font-family="sans-serif" font-size="9" text-anchor="middle">Ear toward shoulder · hold 15s each side · gentle stretch</text>
+</svg>

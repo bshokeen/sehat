@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 110" width="380" height="110">
+  <rect width="380" height="110" rx="8" fill="#1e1e2e"/>
+  <text x="190" y="16" fill="#f9e2af" font-family="sans-serif" font-size="10" font-weight="600" text-anchor="middle">👁 20-20-20 Rule — Look Away</text>
+  <g transform="translate(130,58)">
+    <!-- Eye -->
+    <ellipse cx="0" cy="0" rx="22" ry="14" fill="#45475a" stroke="#89b4fa" stroke-width="2"/>
+    <circle cx="0" cy="0" r="8" fill="#3fb950"/>
+    <circle cx="0" cy="0" r="3" fill="#1e1e2e"/>
+    <!-- Blink animation -->
+    <ellipse cx="0" cy="0" rx="22" ry="14" fill="#1e1e2e">
+      <animate attributeName="ry" values="0;0;14;14;14;14;0;0" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <!-- Arrow to distant object -->
+  <line x1="165" y1="58" x2="260" y2="58" stroke="#58a6ff" stroke-width="2" stroke-dasharray="6,4" stroke-linecap="round">
+    <animate attributeName="opacity" values="0.3;1;1;0.3;0.3" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <text x="275" y="54" fill="#58a6ff" font-family="sans-serif" font-size="18">🌳</text>
+  <text x="275" y="72" fill="#8b949e" font-family="sans-serif" font-size="8">20 ft</text>
+  <text x="190" y="96" fill="#8b949e" font-family="sans-serif" font-size="9" text-anchor="middle">Every 20 min · look 20 ft away · for 20 seconds</text>
+</svg>

@@ -1,0 +1,52 @@
+{
+  "conditions": ["neck_strain", "eye_strain"],
+  "reminders": {
+    "eyes": {
+      "enabled": true,
+      "interval_min": 20,
+      "duration_sec": 20,
+      "jitter_min": 5
+    },
+    "posture": {
+      "enabled": true,
+      "interval_min": 30,
+      "duration_sec": 15,
+      "jitter_min": 5
+    },
+    "water": {
+      "enabled": true,
+      "interval_min": 60,
+      "duration_sec": 10,
+      "align_to_clock": 55
+    },
+    "neck_stretch": {
+      "enabled": true,
+      "interval_min": 45,
+      "duration_sec": 90
+    },
+    "stand": {
+      "enabled": true,
+      "interval_min": 60,
+      "duration_sec": 180
+    },
+    "full_break": {
+      "enabled": true,
+      "interval_min": 120,
+      "duration_sec": 600
+    },
+    "workout": {
+      "enabled": true,
+      "interval_min": 240,
+      "duration_sec": 1800,
+      "active_hours": [{"start": "06:00", "end": "09:00"}, {"start": "17:00", "end": "21:00"}]
+    }
+  },
+  "quiet_ranges": [
+    { "start": "22:00", "end": "07:00" }
+  ],
+  "active_days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  "level": 1,
+  "dnd": false,
+  "auto_close_sec": 20,
+  "popup_monitor": "primary"
+}

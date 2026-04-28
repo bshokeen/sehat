@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 110" width="380" height="110">
+  <rect width="380" height="110" rx="8" fill="#1e1e2e"/>
+  <text x="190" y="16" fill="#f9e2af" font-family="sans-serif" font-size="10" font-weight="600" text-anchor="middle">💪 Bodyweight Workout — Quick Reps</text>
+  <!-- Push-up figure -->
+  <g transform="translate(190,60)">
+    <!-- Floor line -->
+    <line x1="-60" y1="20" x2="60" y2="20" stroke="#313244" stroke-width="2"/>
+    <!-- Body in push-up position -->
+    <circle cx="-30" cy="-4" r="8" fill="#f47067"/>
+    <line x1="-22" y1="-2" x2="30" y2="4" stroke="#f47067" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arms pushing -->
+    <line x1="-20" y1="2" x2="-20" y2="20" stroke="#f47067" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="y1" values="2;-4;2" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="10" y1="6" x2="10" y2="20" stroke="#f47067" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="y1" values="6;0;6" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Legs -->
+    <line x1="30" y1="4" x2="45" y2="20" stroke="#f47067" stroke-width="2" stroke-linecap="round"/>
+    <!-- Body bobs -->
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="1.5s" repeatCount="indefinite"/>
+  </g>
+  <text x="190" y="96" fill="#8b949e" font-family="sans-serif" font-size="9" text-anchor="middle">Push-ups · squats · lunges · 5-10 min circuit</text>
+</svg>
