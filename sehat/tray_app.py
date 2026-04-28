@@ -35,6 +35,7 @@ if sys.platform == 'win32':
 
 from sehat.timer_engine import TimerEngine
 from sehat.config import get_data_dir, get_config_path, get_log_dir, get_exercises_index, get_exercises_dir
+from sehat.settings_window import SettingsWindow
 
 # Lock for JSONL writes
 _LOG_LOCK = threading.Lock()
@@ -669,6 +670,8 @@ class SehatTrayApp:
             for ex in json.loads(exercises_index.read_text(encoding='utf-8')):
                 self.exercises[ex['id']] = ex
 
+        self._settings_window: Optional[SettingsWindow] = None
+
         self.root = tk.Tk()
         self.root.withdraw()
 
@@ -726,6 +729,7 @@ class SehatTrayApp:
             pystray.Menu.SEPARATOR,
             pystray.MenuItem("🎯 Try Exercise", try_submenu,
                              visible=lambda item: try_submenu is not None),
+            pystray.MenuItem("⚙️ Settings", lambda: self.root.after(0, self._open_settings)),
             pystray.Menu.SEPARATOR,
             pystray.MenuItem("Quit", self._quit),
         )
@@ -810,6 +814,23 @@ class SehatTrayApp:
 
     def _on_snooze_expired(self):
         if self.session_active and not self.engine.is_dnd and not self.engine.is_snoozed:
+            self._update_tray('green')
+
+    def _open_settings(self):
+        """Open settings window (prevent duplicates)."""
+        if (self._settings_window and self._settings_window.top
+                and self._settings_window.top.winfo_exists()):
+            self._settings_window.top.lift()
+            return
+        config_path = get_config_path(self.data_dir)
+        self._settings_window = SettingsWindow(
+            self.root, config_path, on_save=self._on_settings_saved)
+
+    def _on_settings_saved(self):
+        """Called after settings are saved — reseed timer if session is active."""
+        if self.session_active:
+            self.engine.stop()
+            self.engine.start()
             self._update_tray('green')
 
     def _quit(self, icon=None, item=None):
