@@ -6,6 +6,32 @@ A standalone desktop health reminder app that lives in your system tray. Configu
 ![Platform](https://img.shields.io/badge/platform-Windows-green)
 ![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/exercise_popup_neck.png" alt="Neck Exercise Popup" width="340"/>
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/exercise_popup_eyes.png" alt="Eye Break Popup" width="340"/>
+</p>
+
+<p align="center">
+  <em>Animated exercise popups with Done/Skip buttons and step-by-step instructions</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/settings_window.png" alt="Settings Window" width="400"/>
+</p>
+
+<p align="center">
+  <em>Settings UI — configure reminders, active days, quiet hours, and more</em>
+</p>
+
+**Tray icon states:** &nbsp;
+![green](docs/screenshots/heart_green.png) Active &nbsp;
+![yellow](docs/screenshots/heart_yellow.png) Paused &nbsp;
+![orange](docs/screenshots/heart_orange.png) Snoozed &nbsp;
+![grey](docs/screenshots/heart_grey.png) Stopped
+
 ## Features
 
 - **System tray icon** — green heart when active, yellow when paused, orange when snoozed, grey when stopped
