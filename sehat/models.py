@@ -20,6 +20,7 @@ class ReminderConfig(BaseModel):
     enabled: bool = True
     interval_min: int
     duration_sec: Optional[int] = None
+    popup_stay_sec: Optional[int] = None  # how long the popup stays on screen before auto-dismiss (overrides global auto_close_sec when set; blank = use global)
     active_hours: Optional[list[dict[str, str]]] = None
     align_to_clock: Optional[int] = None
     jitter_min: int = 0

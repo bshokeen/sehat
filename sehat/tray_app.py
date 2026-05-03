@@ -878,6 +878,8 @@ class SehatTrayApp:
 
         auto_close = 15
         monitor_pref = "primary"
+        # Per-reminder activity-duration override (used for the popup's info text)
+        activity_dur_override = None
         try:
             cfg_path = get_config_path(self.data_dir)
             cfg = json.loads(cfg_path.read_text(encoding='utf-8'))
@@ -885,8 +887,24 @@ class SehatTrayApp:
             global_auto = cfg.get('auto_close_sec', 0)
             if global_auto > 0:
                 auto_close = global_auto
+            reminder_cfg = cfg.get('reminders', {}).get(reminder_type, {})
+            # Popup-stay override (per reminder type) wins over global
+            ps = reminder_cfg.get('popup_stay_sec')
+            if isinstance(ps, int) and ps > 0:
+                auto_close = ps
+            # Activity-duration override (per reminder type) — overrides the
+            # exercise's own duration_sec for display in the popup info line.
+            ad = reminder_cfg.get('duration_sec')
+            if isinstance(ad, int) and ad >= 0:
+                activity_dur_override = ad
         except Exception:
             pass
+
+        # Apply activity-duration override to a shallow copy so we don't mutate
+        # the exercises dict that other code paths may share.
+        if activity_dur_override is not None:
+            exercise = dict(exercise)
+            exercise['duration_sec'] = activity_dur_override
 
         def on_done():
             log_event(self.data_dir, 'done', reminder_type,
