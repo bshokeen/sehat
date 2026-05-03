@@ -5,34 +5,40 @@
       "enabled": true,
       "interval_min": 20,
       "duration_sec": 20,
-      "jitter_min": 5
+      "jitter_min": 5,
+      "active_hours": [{"start": "09:00", "end": "18:00"}]
     },
     "posture": {
       "enabled": true,
       "interval_min": 30,
       "duration_sec": 15,
-      "jitter_min": 5
+      "jitter_min": 5,
+      "active_hours": [{"start": "09:00", "end": "18:00"}]
     },
     "water": {
       "enabled": true,
       "interval_min": 60,
       "duration_sec": 10,
-      "align_to_clock": 55
+      "align_to_clock": 55,
+      "active_hours": [{"start": "09:00", "end": "18:00"}]
     },
     "neck_stretch": {
       "enabled": true,
       "interval_min": 45,
-      "duration_sec": 90
+      "duration_sec": 90,
+      "active_hours": [{"start": "09:00", "end": "18:00"}]
     },
     "stand": {
       "enabled": true,
       "interval_min": 60,
-      "duration_sec": 180
+      "duration_sec": 180,
+      "active_hours": [{"start": "09:00", "end": "18:00"}]
     },
     "full_break": {
       "enabled": true,
       "interval_min": 120,
-      "duration_sec": 600
+      "duration_sec": 600,
+      "active_hours": [{"start": "09:00", "end": "18:00"}]
     },
     "workout": {
       "enabled": true,
